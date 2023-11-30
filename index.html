@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Songs for the Turtles</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .background {
+        background-image: url("the_turtle.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .spotify-playlist {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 0;
+        right: 0;
+        transform: translateY(-50%); /* Center vertically */
+        width: 600px; /* Default width */
+        height: 380px; /* Default height */
+        margin: auto; /* Auto margins for horizontal centering */
+        border-radius: 12px;
+        overflow: hidden; /* Ensures the border-radius is applied */
+      }
+      @media (max-width: 600px) {
+        .spotify-playlist {
+          width: calc(100% - 20px); /* Width with margin */
+          max-width: 580px; /* Max width considering the margins */
+          min-width: 300px; /* Minimum width */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <iframe
+        class="spotify-playlist"
+        src="https://open.spotify.com/embed/playlist/78eiIlSsc1jYD770ITXMIi?utm_source=generator"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </body>
+</html>
